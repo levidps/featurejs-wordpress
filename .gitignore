@@ -1,0 +1,9 @@
+# IDE File
+.idea
+
+# Package Lock
+package-lock.json
+
+# Directories
+node_modules/
+dist/

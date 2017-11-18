@@ -1,6 +1,6 @@
 
 (function() {
-	var body = document.getElementsByTagName('body')[0];
+	var body = document.documentElement;
 
 	function browserCheck() {
 		if ( feature.cssTransform ) {
