@@ -10,3 +10,7 @@ A lot...still to add is links to download modern browsers, icons, and some other
 ### Future Development
 • Connect features to BE page so that feature support can be toggled on / off
 • Potentially add custom styling
+
+### Credits
+Seriously inspired and motivated and thankful for [@viljamis](https://github.com/viljamis) for the development of featureJS, if it wasn't for this useful bit-o-scripting this plugin would look totally different.
+http://featurejs.com/
