@@ -31,10 +31,10 @@ function check_browser_warning_block() {
 			echo '<p>This site is optimised for modern browsers,we strongly reccommend that you either update your browser or install a modern browser</p>';
 			echo '<p class="divider-text"><span>Browser Suggestions</span></p>';
 			echo '<div class="card-icons">';
-				echo '<a class="icon-chrome" href="'. CHROME_DOWNLOAD .'"></a>';
-				echo '<a class="icon-firefox" href="'. FIREFOX_DOWNLOAD .'"></a>';
-				echo '<a class="icon-IE" href="'. IE_DOWNLOAD .'"></a>';
-				echo '<a class="icon-safari" href="'. SAFARI_DOWNLOAD .'"></a>';
+				echo '<a class="icon-chrome" href="'. CHROME_DOWNLOAD .'" target="_blank"></a>';
+				echo '<a class="icon-firefox" href="'. FIREFOX_DOWNLOAD .'" target="_blank"></a>';
+				echo '<a class="icon-IE" href="'. IE_DOWNLOAD .'" target="_blank"></a>';
+				echo '<a class="icon-safari" href="'. SAFARI_DOWNLOAD .'" target="_blank"></a>';
 			echo '</div>';
 		echo '</div>';
 	echo '</div>';
