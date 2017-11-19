@@ -9,7 +9,8 @@
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+
+.outdated-warning [class^="icon-"], .outdated-warning [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: none;
@@ -22,6 +23,17 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    transition: opacity .3s ease, transform .5s $transition;
+    transform: scale(1);
+    display: inline-block;
+  }
+
+  &:hover:before, &:focus:before {
+    text-decoration: none;
+    transform: scale(1.25);
+  }
 }
 
 .icon-chrome:before {
