@@ -3,7 +3,7 @@
 	var body = document.documentElement;
 
 	function browserCheck() {
-		if ( feature.cssTransform ) {
+		if ( !feature.cssTransform ) {
 			body.classList.add('outdated_browser');
 
 			window.setTimeout( function() {
