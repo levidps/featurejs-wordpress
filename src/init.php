@@ -5,16 +5,19 @@ if ( !defined( 'ABSPATH' ) ) exit;
 // define ('PLUGIN_RESOURCE_PATH', plugin_dir_path(__FILE__));
 define ('PLUGIN_RESOURCE_PATH', get_home_url() . '/wp-content/plugins/featurejs-browser-check/dist');
 
-/**
- * Add feature.js script and custom js script to header
- */
-wp_enqueue_script('feature-detect', PLUGIN_RESOURCE_PATH . '/js/feature.min.js', array(), '1.0', true);
-wp_enqueue_script('feature-warn', PLUGIN_RESOURCE_PATH . '/js/scripts.min.js', array('feature-detect'), '1.0', true);
+function feature_enqueue() {
+	/**
+	 * Add feature.js script and custom js script to header
+	 */
+	wp_enqueue_script('feature-detect', PLUGIN_RESOURCE_PATH . '/js/feature.min.js', array(), '1.0', true);
+	wp_enqueue_script('feature-warn', PLUGIN_RESOURCE_PATH . '/js/scripts.min.js', array('feature-detect'), '1.0', true);
 
-/**
- * Add Custom CSS Styling
- */
-wp_enqueue_style('browser-check', PLUGIN_RESOURCE_PATH . '/css/styles.min.css', false, '1.0', 'all');
+	/**
+	 * Add Custom CSS Styling
+	 */
+	wp_enqueue_style('browser-check', PLUGIN_RESOURCE_PATH . '/css/styles.min.css', false, '1.0', 'all');
+}
+add_action( 'wp_enqueue_scripts', 'feature_enqueue' );
 
 define ('CHROME_DOWNLOAD', 'https://www.google.com/chrome/browser/desktop/');
 define ('FIREFOX_DOWNLOAD', 'https://www.mozilla.org/en-US/firefox');
